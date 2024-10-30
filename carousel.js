@@ -1,55 +1,54 @@
+const productCarousel = new Carousel(
+  document.getElementById('carousel-one'),
+  {
+    transition: 'slide',
+    preload: 3, // Smoother navigation when using lazy loaded images
+    Dots: true,
 
 
-const container = document.getElementById("myCarousel");
-const options = {
-  infinite: true,
-  slidesPerPage: 1,
-  Dots: true,
-  dragToClose: false,
-  idle: false,
+  },);
   
-};
 
-new Carousel(container, options);
+Fancybox.bind('[data-fancybox="gallery"]', {
 
+    compact: false,
+    idle: false,
+    dragToClose: false,
+    contentClick: () =>
+      window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+        ? 'toggleMax'
+        : 'toggleCover',
 
-const container1 = document.getElementById("myCarousel1");
-const options1 = {
-  infinite: true,
-  slidesPerPage: 1,
-  Dots: true,
-  dragToClose: false,
-  idle: false,
+    animated: false,
+    showClass: false,
+    hideClass: false,
+    Hash: false,
 
-};
+    Thumbs: {
+      showOnStart: true,
+      type: "classic"
+    },
 
-new Carousel(container1, options1, { Thumbs });
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ['close'],
+      },
+    },
 
-const container2 = document.getElementById("myCarousel2");
-const options2 = {
+    Carousel: {
+      transition: 'fadeFast',
+      preload: 3,
+    },
 
-  infinite: true,
-  slidesPerPage: 1,
-  Dots: true,
-  dragToClose: false,
-  idle: false,
-
-};
-
-new Carousel(container2, options2, { Thumbs });
-
-
-
-const container3 = document.getElementById("myCarousel3");
-const options3 = {
-
-  infinite: true,
-  slidesPerPage: 1,
-  Dots: true,
-  dragToClose: false,
-  idle: false,
-
-};
-
-new Carousel(container3, options3, { Thumbs });
-
+    Images: {
+      Panzoom: {
+        zoom: false,
+      },
+  
+      zoom: false,
+  
+      
+    },
+});

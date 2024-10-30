@@ -2,7 +2,17 @@ Fancybox.bind('[data-fancybox="single"]', {
   groupAttr: false,
   hideScrollbar: true,
   compact: false,
+  idle: false,
+  dragToClose: false,
+  contentClick: () =>
+    window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+      ? 'toggleMax'
+      : 'toggleCover',
 
+  animated: false,
+  showClass: false,
+  hideClass: false,
+  Hash: false,
 
   Images: {
     initialSize: "fit",
@@ -18,13 +28,10 @@ Fancybox.bind('[data-fancybox="single"]', {
   Toolbar: {
     display: {
       left: [],
-      middle : [],
-      right: [
-        "fullscreen",
-        "close",
-      ],
-    }
-  }
+      middle: [],
+      right: ['close'],
+    },
+  },
 
   
 });    
@@ -64,6 +71,54 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 
 });
 
+Fancybox.bind('[data-fancybox="illustration"]', {
+  hideScrollbar: true,
+  compact: false,
+  
+  Thumbs: {
+    showOnStart: true,
+    type: "classic"
+  },
+
+    compact: false,
+    idle: false,
+    dragToClose: false,
+    contentClick: () =>
+      window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+        ? 'toggleMax'
+        : 'toggleCover',
+
+    animated: false,
+    showClass: false,
+    hideClass: false,
+
+    Hash: false,
+
+    Toolbar: {
+      display: {
+        left: [],
+        middle: ["prev", "infobar", "next"],
+        right: ['close'],
+      },
+    },
+
+    Carousel: {
+      transition: 'fadeFast',
+      preload: 3,
+    },
+
+    Images: {
+      Panzoom: {
+        zoom: false,
+      },
+  
+      zoom: false,
+  
+      
+    },
+
+});
+
 Fancybox.bind('[data-fancybox="logo"]', {
   hideScrollbar: true,
   compact: false,
@@ -73,29 +128,42 @@ Fancybox.bind('[data-fancybox="logo"]', {
     type: "classic"
   },
 
-  Images: {
-    initialSize: "fit",
-    Panzoom: {
-      zoom: false,
+    compact: false,
+    idle: false,
+    dragToClose: false,
+    contentClick: () =>
+      window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+        ? 'toggleMax'
+        : 'toggleCover',
+
+    animated: false,
+    showClass: false,
+    hideClass: false,
+
+    Hash: false,
+
+    Toolbar: {
+      display: {
+        left: [],
+        middle: ["prev", "infobar", "next"],
+        right: ['close'],
+      },
     },
 
-    zoom: false,
+    Carousel: {
+      transition: 'fadeFast',
+      preload: 3,
+    },
 
-    
-  },
-
-
-  Toolbar: {
-    display: {
-      left: [],
-      middle : ["prev", "infobar", "next"],
-      right: [
-        "thumbs",
-        "close",
+    Images: {
+      Panzoom: {
+        zoom: false,
+      },
   
-      ],
-    }
-  }
+      zoom: false,
+  
+      
+    },
 
 });
 
@@ -103,35 +171,47 @@ Fancybox.bind('[data-fancybox="logo"]', {
 Fancybox.bind('[data-fancybox="mockups"]', {
   hideScrollbar: true,
   compact: false,
-  
+
   Thumbs: {
     showOnStart: true,
     type: "classic"
   },
 
-  Images: {
-    initialSize: "fit",
-    Panzoom: {
-      zoom: false,
-    },
+  idle: false,
+  dragToClose: false,
+  contentClick: () =>
+    window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+      ? 'toggleMax'
+      : 'toggleCover',
 
-    zoom: false,
+  animated: false,
+  showClass: false,
+  hideClass: false,
 
-    
-  },
-
+  Hash: false,
 
   Toolbar: {
     display: {
       left: [],
-      middle : ["prev", "infobar", "next"],
-      right: [
-        "thumbs",
-        "close",
+      middle: ["prev", "infobar", "next"],
+      right: ['close'],
+    },
+  },
+
+  Carousel: {
+    transition: 'fadeFast',
+    preload: 3,
+  },
+
+  Images: {
+    Panzoom: {
+      zoom: false,
+    },
   
-      ],
-    }
-  }
+    zoom: false,
+  
+      
+  },
 
 });
 
@@ -144,134 +224,184 @@ Fancybox.bind('[data-fancybox="imagery"]', {
     type: "classic"
   },
 
-  Images: {
-    initialSize: "fit",
-    Panzoom: {
-      zoom: false,
-    },
+  idle: false,
+  dragToClose: false,
+  contentClick: () =>
+    window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+      ? 'toggleMax'
+      : 'toggleCover',
 
-    zoom: false,
+  animated: false,
+  showClass: false,
+  hideClass: false,
 
-    
-  },
-
+  Hash: false,
 
   Toolbar: {
     display: {
       left: [],
-      middle : ["prev", "infobar", "next"],
-      right: [
-        "thumbs",
-        "close",
+      middle: ["prev", "infobar", "next"],
+      right: ['close'],
+    },
+  },
+
+  Carousel: {
+    transition: 'fadeFast',
+    preload: 3,
+  },
+
+  Images: {
+    Panzoom: {
+      zoom: false,
+    },
   
-      ],
-    }
-  }
+    zoom: false,
+  
+      
+  },
 
 });
 
 Fancybox.bind('[data-fancybox="bg-pattern-circle"]', {
   hideScrollbar: true,
   compact: false,
-  
+
   Thumbs: {
     showOnStart: true,
     type: "classic"
   },
 
-  Images: {
-    initialSize: "fit",
-    Panzoom: {
-      zoom: false,
-    },
+  idle: false,
+  dragToClose: false,
+  contentClick: () =>
+    window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+      ? 'toggleMax'
+      : 'toggleCover',
 
-    zoom: false,
+  animated: false,
+  showClass: false,
+  hideClass: false,
 
-    
-  },
-
+  Hash: false,
 
   Toolbar: {
     display: {
       left: [],
-      middle : ["prev", "infobar", "next"],
-      right: [
-        "thumbs",
-        "close",
+      middle: ["prev", "infobar", "next"],
+      right: ['close'],
+    },
+  },
+
+  Carousel: {
+    transition: 'fadeFast',
+    preload: 3,
+  },
+
+  Images: {
+    Panzoom: {
+      zoom: false,
+    },
   
-      ],
-    }
-  }
+    zoom: false,
+  
+      
+  },
 
 });
 
 Fancybox.bind('[data-fancybox="bg-pattern-shape-outline"]', {
   hideScrollbar: true,
   compact: false,
-  
+
   Thumbs: {
     showOnStart: true,
     type: "classic"
   },
 
-  Images: {
-    initialSize: "fit",
-    Panzoom: {
-      zoom: false,
-    },
+  idle: false,
+  dragToClose: false,
+  contentClick: () =>
+    window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+      ? 'toggleMax'
+      : 'toggleCover',
 
-    zoom: false,
+  animated: false,
+  showClass: false,
+  hideClass: false,
 
-    
-  },
-
+  Hash: false,
 
   Toolbar: {
     display: {
       left: [],
-      middle : ["prev", "infobar", "next"],
-      right: [
-        "thumbs",
-        "close",
+      middle: ["prev", "infobar", "next"],
+      right: ['close'],
+    },
+  },
+
+  Carousel: {
+    transition: 'fadeFast',
+    preload: 3,
+  },
+
+  Images: {
+    Panzoom: {
+      zoom: false,
+    },
   
-      ],
-    }
-  }
+    zoom: false,
+  
+      
+  },
+
 
 });
 
 Fancybox.bind('[data-fancybox="bg-pattern-typeface"]', {
   hideScrollbar: true,
   compact: false,
-  
+
   Thumbs: {
     showOnStart: true,
     type: "classic"
   },
 
-  Images: {
-    initialSize: "fit",
-    Panzoom: {
-      zoom: false,
-    },
+  idle: false,
+  dragToClose: false,
+  contentClick: () =>
+    window.matchMedia('(max-width: 578px), (max-height: 578px)').matches
+      ? 'toggleMax'
+      : 'toggleCover',
 
-    zoom: false,
+  animated: false,
+  showClass: false,
+  hideClass: false,
 
-    
-  },
-
+  Hash: false,
 
   Toolbar: {
     display: {
       left: [],
-      middle : ["prev", "infobar", "next"],
-      right: [
-        "thumbs",
-        "close",
+      middle: ["prev", "infobar", "next"],
+      right: ['close'],
+    },
+  },
+
+  Carousel: {
+    transition: 'fadeFast',
+    preload: 3,
+  },
+
+  Images: {
+    Panzoom: {
+      zoom: false,
+    },
   
-      ],
-    }
-  }
+    zoom: false,
+  
+      
+  },
+
 
 });
 
