@@ -1,3 +1,5 @@
+
+
 .head-list{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -74,12 +76,23 @@
   gap: 20px;
 }
 
-.minimalist{
+.minimalist, .typography{
   flex: 1;
 }
 
+.carousel-counter{
+  padding-top: 1rem;
+  text-align: center;
+}
 
-.minimalism-container{
+.carousel-counter span{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1b1b1b;
+  background-color: ;
+}
+
+.minimalism-container, .typography-container{
   display: flex;
   align-items: start;
   justify-content: center;
@@ -87,10 +100,35 @@
   gap: 20px;
 }
 
-.minimalism-title{
+.maximalism-container, .advertising-container{
+  padding-top: 1rem;
+}
+
+.minimalism-title, .typograhpy-title, .maximalism-title, .advertising-title{
   color: #ff4144;
   font-weight: 500;
 }
+
+.head-content-four{
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.head-content-five{
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.sub-content-five{
+  flex: 1;
+}
+
 
 .head-content-two-description{
   font-weight: 500;
@@ -146,10 +184,6 @@
   height: auto;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 .branding-title{
   color: #ff4144;
@@ -314,6 +348,11 @@ img {
   cursor: pointer;
 }
 
+.branding-grid-item-bg-pattern img {
+  max-width: 100%;
+  height: auto;
+}
+
 .branding-main-container-bg-pattern{
   padding-top: 6rem;
 }
@@ -383,10 +422,6 @@ img {
 
 @media only screen and (max-width: 1440px){
 
-  .head-content-three{
-    flex-direction: column;
-  }
-
 
   .branding-main-container-mockups{
     display: flex;
@@ -435,6 +470,18 @@ img {
 }
 
 @media only screen and (max-width: 1024px){
+
+  .head-content-three{
+    flex-direction: column;
+  }
+
+  .head-content-four{
+    flex-direction: column-reverse;
+  }
+
+  .head-content-five{
+    flex-direction: column;
+  }
  
   .branding-container-mockups{
     display: flex;
@@ -518,7 +565,7 @@ img {
 }
 
 
-#carousel-one{
+#carousel-one, #carousel-two, #carousel-three, #carousel-four{
   --f-carousel-spacing: 0;
 
   --f-button-width: 48px;
@@ -537,25 +584,32 @@ img {
 
   --f-button-svg-stroke-width: 1.5;
   --f-button-svg-filter: none;
-
-  
 }
 
+@media only screen and (max-width: 425px) {
+  #carousel-one, #carousel-two, #carousel-three, #carousel-four{
+    --f-button-width: 28px;
+    --f-button-height: 28px;
 
-#carousel-one .f-carousel__slide {
+    --f-button-svg-width: 18px;
+    --f-button-svg-height: 18px;
+  }
+}
+
+#carousel-one .f-carousel__slide, #carousel-two .f-carousel__slide, #carousel-three .f-carousel__slide, #carousel-four .f-carousel__slide{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-#carousel-one .f-carousel__slide img {
+#carousel-one .f-carousel__slide img, #carousel-two .f-carousel__slide img, #carousel-three .f-carousel__slide img, #carousel-four .f-carousel__slide img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#carousel-one .f-carousel__nav {
+#carousel-one .f-carousel__nav, #carousel-two .f-carousel__nav, #carousel-three .f-carousel__nav, #carousel-four .f-carousel__nav{
   opacity: 1;
 }
 
