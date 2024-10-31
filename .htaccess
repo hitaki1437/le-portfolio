@@ -1,6 +1,16 @@
 RewriteEngine On
+RewriteBase /
+
+# To externally redirect /dir/foo.html to /dir/foo
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1/ [R=301,L]
+
+# Add a trailing slash at the end    
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
-RewriteCond %{REQUEST_URI} !(.+)/$
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.+)$ https://www.rennymelh.com/$1/ [R=301,L]
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule . %{REQUEST_URI}/ [L,R=301]
+
+# To internally forward /dir/foo to /dir/foo.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
