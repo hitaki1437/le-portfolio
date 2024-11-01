@@ -36,6 +36,7 @@ html{
 }
 
 .nav-item a{
+  font-weight: 500;
   color: #1b1b1b;
 }
 
@@ -676,12 +677,12 @@ section{
   margin: 0;
 } 
 
-.footer-info li{
+.footer-info ul li a{
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-:where(.footer-info li, .footer-info a):hover{
+.footer-info ul li a:hover{
   color: #ff4144;
   
 }
